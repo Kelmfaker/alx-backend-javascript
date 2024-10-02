@@ -10,8 +10,4 @@ function handleResponseFromAPI(promise) {
       .catch(() => {
         return new Error();
       });
-  }
-  
-  // Example usage:
-  const promise = Promise.resolve();
-  handleResponseFromAPI(promise);  
+  } 
