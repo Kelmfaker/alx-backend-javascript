@@ -21,6 +21,5 @@ function handleResponseFromAPI(promise) {
     });
 }
 
-// Simulating an error response with an Error object
-const promise = Promise.reject(new Error('API error'));
-handleResponseFromAPI(promise);
+export default
+handleResponseFromAPI;
