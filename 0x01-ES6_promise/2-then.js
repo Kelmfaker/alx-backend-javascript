@@ -5,7 +5,7 @@ function handleResponseFromAPI(promise) {
       body: 'success',
     }))
     .then((response) => {
-      console.error();
+      console.error('');
       return response;
     })
     .then((response) => {
