@@ -4,11 +4,13 @@ function handleResponseFromAPI(promise) {
       status: 200,
       body: 'success',
     }))
-    .then(() => {
+    .then((response) => {
       console.error();
+      return response;
     })
-    .then(() => {
+    .then((response) => {
       console.log('Got a response from the API');
+      return response;
     })
     .catch((error) => {
       console.error('API call failed');
