@@ -1,5 +1,11 @@
 function handleResponseFromAPI(promise) {
-  promise
+  new Promise((resolve, reject) => {
+    if (promise) {
+      resolve();
+    } else {
+      reject();
+    }
+  })
     .then(() => ({
       status: 200,
       body: 'success',
