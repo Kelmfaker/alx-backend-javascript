@@ -1,6 +1,6 @@
 import { uploadPhoto, createUser } from './utils';
 
-function handleProfileSignup() {
+export default function nhandleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
     .then((results) => {
       const [photo, user] = results;
