@@ -6,10 +6,8 @@ export default function updateStudentGradeByCity(data, city, newGrades) {
   // Handling the Case When newGrades is Not Provided
   return dataLoc.map((student) => {
     if (!newGrades) {
-      const newGrade = newGrades.find((grade) => grade.studentId === student.id);
       return {
-        ...student,
-        grade: newGrade ? newGrade.grade : 'N/A',
+        ...student, grade: 'N/A',
       };
     }
 
