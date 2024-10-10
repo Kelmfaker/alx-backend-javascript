@@ -1,7 +1,7 @@
 interface Student {
   firstName: string;
   lastName: string;
-  age: string;
+  age: number;
   location: string;
   }
 
