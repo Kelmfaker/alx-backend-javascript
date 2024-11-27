@@ -1,5 +1,6 @@
-// consolee
+// console
 function displayMessage(message) {
-    console.log(message);
+  /* eslint-disable no-console */
+  console.log(message);
 }
 module.exports = displayMessage;
