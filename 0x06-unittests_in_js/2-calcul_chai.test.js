@@ -15,7 +15,7 @@ describe('calculateNumber', function() {
     expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
   });
 
-  it('should return Error when type is DIVIDE and second input is 0', function() {
-    expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal(Error);
+  it('should return "Error" when type is DIVIDE and second input is 0', function() {
+    expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error');
   });
 });
