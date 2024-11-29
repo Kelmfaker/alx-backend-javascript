@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "readme",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^5.1.2",
     "mocha": "^10.8.2"
   }
 }
