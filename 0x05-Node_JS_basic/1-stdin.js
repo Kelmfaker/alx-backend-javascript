@@ -1,5 +1,4 @@
 // 1-stdin.js
-function main() {
     process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
     process.stdin.on('data', (data) => {
@@ -10,10 +9,3 @@ function main() {
         }
         process.exit();
     });
-}
-
-module.exports = main;
-
-if (require.main === module) {
-    main();
-}
