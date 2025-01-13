@@ -1,20 +1,17 @@
-const expect = require('chai');
+const { spawn } = require('child_process');
 const path = require('path');
-const child = require('child_process');
 
 const exec = path.join(__dirname, '.', '1-stdin.js');
 
-describe('main', () => {
-  it('the user is entering a name', function (done) {
-    const proc = child.spawn("node", exec, { stdio: 'pipe' });
+test('the user is entering a name', (done) => {
+  const proc = spawn("node", [exec], { stdio: 'pipe' });
 
+  proc.stdout.once('data', (test) => {
+    expect(test.toString()).toBe('Welcome to Holberton School, what is your name?\n');
+    proc.stdin.write('Guillaumeh\n');
     proc.stdout.once('data', (test) => {
-      expect(test.toString()).to.equal('Welcome to Holberton School, what is your name?\n');
-      proc.stdin.write('Guillaumeh\r');
-      proc.stdout.once('data', (test) => {
-        expect(test.toString()).to.equal('Your name is: Guillaumeh\r');
-        done();
-      });
+      expect(test.toString()).toBe('Your name is: Guillaumeh\n');
+      done();
     });
   });
 });
